@@ -69,7 +69,52 @@ function scriptWrapper($) {
        * Slider Functions
        */
       sliderFunctions: function () {
-         // Slick slider initialization
+         // Slick slider for the Portfolio section
+         var portfolioSlider = $('section.portfolio-section-wrap .corporate-portfolio-section .corporate-portfolio-inner-wrapper');
+         if (portfolioSlider.length > 0) {
+            portfolioSlider.slick({
+               slidesToShow: 7,
+               slidesToScroll: 1,
+               dots: false,
+               arrows: false,
+               infinite: true,
+               autoplay: true,
+               autoplaySpeed: 0,
+               speed: 5000,
+               cssEase: 'linear',
+               pauseOnHover: true,
+               responsive: [
+                  {
+                     breakpoint: 1200,
+                     settings: {
+                        slidesToShow: 6,
+                        slidesToScroll: 1,
+                     }
+                  },
+                  {
+                     breakpoint: 992,
+                     settings: {
+                        slidesToShow: 5,
+                        slidesToScroll: 1,
+                     }
+                  },
+                  {
+                     breakpoint: 768,
+                     settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 1,
+                     }
+                  },
+                  {
+                     breakpoint: 480,
+                     settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                     }
+                  },
+               ]
+            });
+         }
       },
 
       /**

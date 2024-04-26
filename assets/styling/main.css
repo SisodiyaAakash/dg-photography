@@ -623,13 +623,14 @@ body main.main-content section {
   /* Hero Section ends here */
   /* About Us Section */
   /* About Us Section ends here */
+  /* Portfolio Section */
 }
 body main.main-content section.hero-section-wrap .hero-section {
   background-size: cover;
   background-position: center;
 }
 body main.main-content section.hero-section-wrap .hero-section .overlay-wrapper {
-  height: 90vh;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
@@ -767,6 +768,36 @@ body main.main-content section.about-section-wrap .about-section .about-inner-wr
   body main.main-content section.about-section-wrap .about-section .about-inner-wrapper .content-area .content-text {
     margin-top: 20px;
   }
+}
+body main.main-content section.portfolio-section-wrap .corporate-portfolio-section .corporate-portfolio-inner-wrapper:not(.slick-initialized) {
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+}
+body main.main-content section.portfolio-section-wrap .corporate-portfolio-section .corporate-portfolio-inner-wrapper .slick-track {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main.main-content section.portfolio-section-wrap .corporate-portfolio-section .corporate-portfolio-inner-wrapper .corporate-portfolio-itm {
+  aspect-ratio: 1;
+  padding: 10px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main.main-content section.portfolio-section-wrap .corporate-portfolio-section .corporate-portfolio-inner-wrapper .corporate-portfolio-itm img.portfolio-logo {
+  width: 100%;
+  height: auto;
+  transition: 550ms all ease;
+  filter: grayscale(1);
+  opacity: 0.6;
+}
+body main.main-content section.portfolio-section-wrap .corporate-portfolio-section .corporate-portfolio-inner-wrapper .corporate-portfolio-itm:hover img.portfolio-logo {
+  transition: 550ms all ease;
+  filter: grayscale(0);
+  opacity: 1;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=main.css.map */

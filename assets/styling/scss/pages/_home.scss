@@ -8,7 +8,7 @@ body {
           background-position: center;
 
           .overlay-wrapper {
-            height: 90vh;
+            height: 100vh;
             background-color: rgba($black, 0.2);
             @include flex-column;
             justify-content: flex-end;
@@ -140,6 +140,47 @@ body {
         }
       }
       /* About Us Section ends here */
+
+      /* Portfolio Section */
+      &.portfolio-section-wrap {
+        .corporate-portfolio-section {
+          .corporate-portfolio-inner-wrapper {
+            &:not(.slick-initialized) {
+              @include flex-center;
+              overflow-x: auto;
+            }
+
+            .slick-track {
+              @include flex-center;
+              justify-content: center;
+            }
+
+            .corporate-portfolio-itm {
+              aspect-ratio: 1;
+              padding: 10px 25px;
+              @include flex-center;
+              justify-content: center;
+
+              img.portfolio-logo {
+                width: 100%;
+                height: auto;
+                transition: $transition;
+                filter: grayscale(1);
+                opacity: 0.6;
+              }
+
+              &:hover {
+                img.portfolio-logo {
+                  transition: $transition;
+                  filter: grayscale(0);
+                  opacity: 1;
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
