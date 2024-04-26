@@ -42,8 +42,27 @@ function scriptWrapper($) {
             });
          };
 
+         // Parallax Effect for about dg section
+         const parallaxEffectAbout = function () {
+            const imgLeft = $('section.about-section-wrap .about-img.img-left img');
+            const imgRight = $('section.about-section-wrap .about-img.img-right img');
+
+            $(window).on('scroll', function () {
+               const scrollPos = $(window).scrollTop();
+               imgLeft.css({
+                  'object-position': 'center ' + scrollPos * (-0.05) + 'px',
+                  'background-size': 'calc(100% + ' + scrollPos * 0.8 + 'px)'
+              });
+              imgRight.css({
+                  'object-position': 'center ' + scrollPos * (-0.09) + 'px',
+                  'background-size': 'calc(100% + ' + scrollPos * 0.8 + 'px)'
+              });              
+            });
+         };
+
          // Execute Parallax
          parallaxEffectHero();
+         parallaxEffectAbout();
       },
 
       /**
@@ -98,8 +117,7 @@ function scriptWrapper($) {
 
          // Toggle hide class on body header.header nav.navbar .brand-area a.toggle-btn span
          $('body header.header nav.navbar .brand-area a.toggle-btn span').toggleClass('hide');
-      }
-      ,
+      },
    }; // end dgTheme
 
    $(document).ready(dgTheme.init);
