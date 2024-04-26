@@ -58,6 +58,7 @@ function scriptWrapper($) {
        */
       registerEventHandlers: function () {
          $(document).on('click', 'body header.header nav.navbar .brand-area a.toggle-btn', dgTheme.toggleMobileMenu);
+         $(document).on('click', 'ul li.menu-itm a.menu-link', dgTheme.scrollToSection);
       },
 
       /**
@@ -74,6 +75,23 @@ function scriptWrapper($) {
          // Toggle hide class on body header.header nav.navbar .brand-area a.toggle-btn span
          $('body header.header nav.navbar .brand-area a.toggle-btn span').toggleClass('hide');
       },
+
+
+      /**
+       * On click of menu items this function will execute
+       * This function will redirect to corresponding section if section exist 
+       */
+      scrollToSection: function (event) {
+         var targetId = $(this).attr('href');
+         
+         if ($(targetId).length > 0) {
+            event.preventDefault();
+            $('html, body').animate({
+               scrollTop: $(targetId).offset().top - $('header#header').height()
+            }, 1000);
+         }
+      }
+      ,
    }; // end dgTheme
 
    $(document).ready(dgTheme.init);

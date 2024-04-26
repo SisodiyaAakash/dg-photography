@@ -6,7 +6,7 @@ body {
     z-index: 999;
     padding: 20px 0;
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: $breakpoint-sm) {
       max-height: 75px;
     }
 
@@ -18,7 +18,7 @@ body {
         @include flex-center;
         flex: 1;
 
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: $breakpoint-sm) {
           display: none;
         }
 
@@ -82,13 +82,13 @@ body {
         justify-content: center;
         margin: 0 120px;
 
-        @media screen and (max-width: 1199px) {
+        @media screen and (max-width: $breakpoint-lg) {
           margin: 0 100px;
         }
-        @media screen and (max-width: 991px) {
+        @media screen and (max-width: $breakpoint-md) {
           margin: 0 80px;
         }
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: $breakpoint-sm) {
           margin: 0;
           width: 100%;
           max-width: 100%;
@@ -115,7 +115,7 @@ body {
           position: relative;
           color: $dg-primary;
 
-          @media screen and (max-width: 767px) {
+          @media screen and (max-width: $breakpoint-sm) {
             display: block;
           }
 
@@ -154,7 +154,7 @@ body {
       background-color: $dg-primary;
       z-index: 999;
 
-      @media screen and (max-width: 767px) {
+      @media screen and (max-width: $breakpoint-sm) {
         display: flex;
         flex-direction: column;
       }
