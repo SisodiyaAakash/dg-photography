@@ -1,0 +1,113 @@
+html,
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+
+  ol,
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .container {
+    display: block;
+    width: 80%;
+    max-width: $breakpoint-lg;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (max-width: $breakpoint-md) {
+      width: 90%;
+    }
+    @media screen and (max-width: $breakpoint-sm) {
+      width: calc(100% - 40px);
+    }
+  }
+
+  .hide {
+    display: none;
+  }
+
+  &.oveflow-hidden,
+  .oveflow-hidden {
+    overflow: hidden;
+  }
+
+  section {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+}
+
+// Custom Scrollbar
+* {
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $dg-secondary;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba($dg-primary, 0.6);
+
+    &:hover {
+      background: rgba($dg-primary, 0.85);
+    }
+  }
+}
+
+// Font weights
+body {
+  .extra-light {
+    font-weight: $extra-light;
+  }
+
+  .light {
+    font-weight: $light;
+  }
+
+  .regular {
+    font-weight: $regular;
+  }
+
+  .medium {
+    font-weight: $medium;
+  }
+
+  .semi-bold {
+    font-weight: $semi-bold;
+  }
+
+  .bold {
+    font-weight: $bold;
+  }
+}
+
+// Typography
+body {
+  .text-center {
+    text-align: center;
+  }
+}

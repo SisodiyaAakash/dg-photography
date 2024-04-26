@@ -1,0 +1,11 @@
+@import "./scss/variable";
+@import "./scss/mixin";
+@import "./scss/typography";
+@import "./scss/general";
+
+// Common Components
+@import "./scss/comps/header";
+@import "./scss/comps/footer";
+
+// Pages
+@import "./scss/pages/home";

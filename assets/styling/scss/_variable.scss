@@ -1,0 +1,53 @@
+// Colours
+$black: #000000;
+$white: #ffffff;
+$grey: #fafafa;
+$grey-2: #cecece;
+$dark-grey: #0c0c0c;
+$red: #e94848;
+$green: #27ae60;
+$yellow: #fff200;
+
+// Font Weight
+$extra-light: 200;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
+$black-weight: 900;
+
+// Utilities
+$transition-fast: 350ms all ease;
+$transition: 550ms all ease;
+$transition-slow: 750ms all ease;
+
+// Responsive Breakpoints
+$breakpoint-xsm: 479px; // Extra small screens
+$breakpoint-sm: 767px; // Small screens
+$breakpoint-md: 991px; // Medium screens
+$breakpoint-lg: 1199px; // Large screens
+
+// Border Variables
+$border-rounded: 50%;
+$border-low: 8px;
+$border-regular: 16px;
+$border-medium: 24px;
+$border-high: 48px;
+
+// Theme colors
+$dg-primary: $grey;
+$dg-secondary: $dark-grey;
+$hover-grey: #858585;
+
+// Border radius
+$dg-primary-radius: 5px;
+$dg-section-label-radius: 21.6px;
+$dg-sharp-radius: 100px;
+
+// Box Shadow
+$dg-primary-box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+
+// Fonts
+$dg-font: "HelveticaNowDisplay";
