@@ -1,5 +1,43 @@
 body {
   main.main-content {
-    // Homepage styling
+    section {
+      /* Hero Section */
+      &.hero-section-wrap {
+        .hero-section {
+          background-size: cover;
+          background-position: center;
+
+          .overlay-wrapper {
+            height: 90vh;
+            background-color: rgba($black, 0.2);
+            @include flex-column;
+            justify-content: flex-end;
+            padding-bottom: 102px;
+
+            @media screen and (max-width: 1199px) {
+              padding-bottom: 80px;
+            }
+            @media screen and (max-width: 991px) {
+              padding-bottom: 64px;
+            }
+            @media screen and (max-width: 767px) {
+              padding-bottom: 54px;
+            }
+            @media screen and (max-width: 543px) {
+              padding-bottom: 30px;
+            }
+
+            .hero-content {
+              text-align: center;
+
+              h1 {
+                text-transform: uppercase;
+              }
+            }
+          }
+        }
+      }
+      /* Hero Section ends here */      
+    }
   }
 }

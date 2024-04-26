@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>DG Photography | Capturing Moments, Creating Memories</title>
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Favicon -->
@@ -88,18 +88,106 @@
   <body>
     <!-- Header -->
     <header class="header" id="header">
-      <!-- I'll add Header here -->
+      <nav class="navbar container">
+        <div class="left-side-menu menu-area">
+          <ul class="menu-wrapper">
+            <li class="menu-itm">
+              <a href="#about" class="menu-link">About</a>
+            </li>
+            <li class="menu-itm">
+              <a href="#portfolio" class="menu-link">Portfolio</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="brand-area">
+          <a class="logo-link" href="/">
+            <img
+              src="./assets/media/brand/logo.svg"
+              alt="DG Photography"
+              class="brand-logo"
+            />
+          </a>
+
+          <a href="#" class="toggle-btn">
+            <span class="">Menu</span>
+            <span class="hide">Close</span>
+          </a>
+        </div>
+
+        <div class="right-side-menu menu-area">
+          <ul class="menu-wrapper">
+            <li class="menu-itm">
+              <a href="#testimonial" class="menu-link">Testimonial</a>
+            </li>
+            <li class="menu-itm">
+              <a href="#contact" class="menu-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="mobile-menu">
+        <ul class="mobile-menu-list">
+          <li class="menu-itm">
+            <a href="#about" class="menu-link">About</a>
+          </li>
+          <li class="menu-itm">
+            <a href="#portfolio" class="menu-link">Portfolio</a>
+          </li>
+          <li class="menu-itm">
+            <a href="#testimonial" class="menu-link">Testimonial</a>
+          </li>
+          <li class="menu-itm">
+            <a href="#contact" class="menu-link">Contact</a>
+          </li>
+        </ul>
+
+        <ul class="social-link-list">
+          <li class="social-itm">
+            <a href="https://www.instagram.com/aakash.s27/" class="social-link">
+              <img
+                class="social-icon"
+                src="./assets/media/icons/instagram.svg"
+                alt="Instagram"
+              />
+            </a>
+          </li>
+          <li class="social-itm">
+            <a
+              href="https://www.linkedin.com/in/aakash-sisodiya/"
+              class="social-link"
+            >
+              <img
+                class="social-icon"
+                src="./assets/media/icons/linkedin.svg"
+                alt="LinkedIn"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
     </header>
+    <!-- Header ends here -->
 
     <main class="main-content">
-      <!-- I'll add different sections here -->
-      <h1>H1 Element</h1>
-      <h2>H2 Element</h2>
-      <h3>H3 Element</h3>
-      <h4>H4 Element</h4>
-      <h5>H5 Element</h5>
-      <h6>H6 Element</h6>
-      <p>P Element</p>
+      <!-- Hero Section -->
+      <!-- Note for Nitish: Because here are several sliders in the page, I'm adding parallax effect in the hero section instead of the slider -->
+      <section id="hero-section" class="hero-section-wrap">
+        <div
+          class="hero-section"
+          style="background-image: url('./assets/media/home-hero.jpg')"
+        >
+          <div class="overlay-wrapper">
+            <div class="container">
+              <div class="hero-content">
+                <h1>Capturing Moments,<br />Creating Memories</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Hero Section ends here -->
     </main>
 
     <!-- Footer -->
