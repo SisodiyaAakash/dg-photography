@@ -83,13 +83,21 @@ function scriptWrapper($) {
        */
       scrollToSection: function (event) {
          var targetId = $(this).attr('href');
-         
+
          if ($(targetId).length > 0) {
             event.preventDefault();
             $('html, body').animate({
                scrollTop: $(targetId).offset().top - $('header#header').height()
             }, 1000);
          }
+
+         // Also need to remove the classes for mobile menu close
+         $('body').removeClass('oveflow-hidden');
+         $('body header.header').removeClass('open-mobile-header');
+         $('body header.header .mobile-menu').removeClass('open-mobile-menu');
+
+         // Toggle hide class on body header.header nav.navbar .brand-area a.toggle-btn span
+         $('body header.header nav.navbar .brand-area a.toggle-btn span').toggleClass('hide');
       }
       ,
    }; // end dgTheme
