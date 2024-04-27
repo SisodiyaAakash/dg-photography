@@ -23,7 +23,7 @@ body {
   font-size: 16px;
   line-height: 24px;
 
-  @media screen and (max-width: $breakpoint-sm) {
+  @media screen and (max-width: $breakpoint-xsm) {
     font-size: 14px;
     line-height: 20px;
   }
@@ -209,7 +209,7 @@ body {
     line-height: 24px;
     font-weight: $regular;
 
-    @media screen and (max-width: $breakpoint-sm) {
+    @media screen and (max-width: $breakpoint-xsm) {
       font-size: 14px;
       line-height: 20px;
     }

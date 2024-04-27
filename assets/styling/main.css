@@ -18,7 +18,7 @@ body {
   font-size: 16px;
   line-height: 24px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 479px) {
   body {
     font-size: 14px;
     line-height: 20px;
@@ -29,7 +29,8 @@ body h2,
 body h3,
 body h4,
 body h5,
-body h6 {
+body h6,
+body main.main-content section.services-section-wrap .services-section .services-cards .service-card:hover .gradient-overlay .content .service-title {
   font-family: "HelveticaNowDisplay";
   font-weight: 500;
   color: #fafafa;
@@ -39,7 +40,8 @@ body h2 *,
 body h3 *,
 body h4 *,
 body h5 *,
-body h6 * {
+body h6 *,
+body main.main-content section.services-section-wrap .services-section .services-cards .service-card:hover .gradient-overlay .content .service-title * {
   font-family: inherit;
   font-weight: inherit;
 }
@@ -67,6 +69,7 @@ body h3,
 body h4,
 body h5,
 body h6,
+body main.main-content section.services-section-wrap .services-section .services-cards .service-card:hover .gradient-overlay .content .service-title,
 body p,
 body header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.menu-link,
 body .section-label {
@@ -78,6 +81,7 @@ body h3,
 body h4,
 body h5,
 body h6,
+body main.main-content section.services-section-wrap .services-section .services-cards .service-card:hover .gradient-overlay .content .service-title,
 body p,
 body header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.menu-link,
 body .section-label,
@@ -90,6 +94,7 @@ body h3,
 body h4,
 body h5,
 body h6,
+body main.main-content section.services-section-wrap .services-section .services-cards .service-card:hover .gradient-overlay .content .service-title,
 body a,
 body p,
 body header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.menu-link,
@@ -190,13 +195,13 @@ body h5 {
     letter-spacing: 0.24px;
   }
 }
-body h6 {
+body h6, body main.main-content section.services-section-wrap .services-section .services-cards .service-card:hover .gradient-overlay .content .service-title {
   font-size: 24px;
   line-height: 27px;
   letter-spacing: 0.24px;
 }
 @media screen and (max-width: 767px) {
-  body h6 {
+  body h6, body main.main-content section.services-section-wrap .services-section .services-cards .service-card:hover .gradient-overlay .content .service-title {
     font-size: 18px;
     line-height: 24px;
     letter-spacing: 0.2px;
@@ -208,7 +213,7 @@ body li {
   line-height: 24px;
   font-weight: 400;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 479px) {
   body p, body header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.menu-link, body .section-label,
   body li {
     font-size: 14px;
@@ -847,6 +852,107 @@ body main.main-content section.portfolio-section-wrap div.portfolio-gallery-sect
 body main.main-content section.portfolio-section-wrap div.portfolio-gallery-section .portfolio-gallery-inner-wrapper .portfolio-column .portfolio-gallery-itm img.gallery-img {
   width: 100%;
   height: auto;
+}
+body main.main-content section.services-section-wrap {
+  padding: 90px 0;
+  overflow: hidden;
+}
+@media screen and (max-width: 1199px) {
+  body main.main-content section.services-section-wrap {
+    padding: 82px 0;
+  }
+}
+@media screen and (max-width: 991px) {
+  body main.main-content section.services-section-wrap {
+    padding: 68px 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  body main.main-content section.services-section-wrap {
+    padding: 52px 0;
+  }
+}
+@media screen and (max-width: 479px) {
+  body main.main-content section.services-section-wrap {
+    padding: 27px 0;
+  }
+}
+body main.main-content section.services-section-wrap .services-section .heading-area p.section-label, body main.main-content section.services-section-wrap .services-section .heading-area .section-label, body main.main-content section.services-section-wrap .services-section .heading-area header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.section-label.menu-link, body header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm main.main-content section.services-section-wrap .services-section .heading-area a.section-label.menu-link {
+  margin-left: auto;
+  margin-right: auto;
+}
+body main.main-content section.services-section-wrap .services-section .services-cards {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 27px;
+}
+@media screen and (max-width: 991px) {
+  body main.main-content section.services-section-wrap .services-section .services-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 767px) {
+  body main.main-content section.services-section-wrap .services-section .services-cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+body main.main-content section.services-section-wrap .services-section .services-cards .service-card {
+  background-position: center;
+  background-size: cover;
+}
+body main.main-content section.services-section-wrap .services-section .services-cards .service-card .gradient-overlay {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 300/450;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 550ms all ease;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.6) 100%);
+  padding: 30px;
+}
+@media screen and (max-width: 767px) {
+  body main.main-content section.services-section-wrap .services-section .services-cards .service-card .gradient-overlay {
+    padding: 27px;
+  }
+}
+body main.main-content section.services-section-wrap .services-section .services-cards .service-card .gradient-overlay .content {
+  width: 100%;
+  text-align: center;
+}
+body main.main-content section.services-section-wrap .services-section .services-cards .service-card .gradient-overlay .content .service-title {
+  transition: 550ms all ease;
+}
+body main.main-content section.services-section-wrap .services-section .services-cards .service-card .gradient-overlay .content .service-desc {
+  font-size: 0;
+  line-height: 0;
+  visibility: hidden;
+  transition: 550ms visibility ease, 250ms font-size ease;
+  margin-top: 20px;
+}
+@media screen and (max-width: 767px) {
+  body main.main-content section.services-section-wrap .services-section .services-cards .service-card .gradient-overlay .content .service-desc {
+    margin-top: 15px;
+  }
+}
+body main.main-content section.services-section-wrap .services-section .services-cards .service-card:hover .gradient-overlay {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.8) 40%);
+}
+body main.main-content section.services-section-wrap .services-section .services-cards .service-card:hover .gradient-overlay .content .service-title {
+  transition: 550ms all ease;
+}
+body main.main-content section.services-section-wrap .services-section .services-cards .service-card:hover .gradient-overlay .content .service-desc {
+  font-size: 16px;
+  line-height: 24px;
+  visibility: visible;
+  transition: 550ms visibility ease, 250ms font-size ease;
+}
+@media screen and (max-width: 479px) {
+  body main.main-content section.services-section-wrap .services-section .services-cards .service-card:hover .gradient-overlay .content .service-desc {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
