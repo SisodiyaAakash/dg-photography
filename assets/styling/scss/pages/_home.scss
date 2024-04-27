@@ -1,7 +1,7 @@
 body {
   main.main-content {
     section {
-      /* Hero Section */
+      // Hero Section
       &.hero-section-wrap {
         .hero-section {
           background-size: cover;
@@ -37,9 +37,9 @@ body {
           }
         }
       }
-      /* Hero Section ends here */
+      // Hero Section ends here
 
-      /* About Us Section */
+      // About Us Section
       &.about-section-wrap {
         padding: 90px 0;
 
@@ -139,11 +139,12 @@ body {
           }
         }
       }
-      /* About Us Section ends here */
+      // About Us Section ends here
 
-      /* Portfolio Section */
+      // Portfolio Section
       &.portfolio-section-wrap {
-        .corporate-portfolio-section {
+        // Corporate Portfolio Section for highlight corporate work
+        div.corporate-portfolio-section {
           .corporate-portfolio-inner-wrapper {
             &:not(.slick-initialized) {
               @include flex-center;
@@ -160,6 +161,10 @@ body {
               padding: 10px 25px;
               @include flex-center;
               justify-content: center;
+
+              @media screen and (max-width: $breakpoint-sm) {
+                padding: 6px 12px;
+              }
 
               img.portfolio-logo {
                 width: 100%;
@@ -180,7 +185,60 @@ body {
             }
           }
         }
+
+        // Portfolio Gallery Section for masonary layout
+        div.portfolio-gallery-section {
+          .portfolio-gallery-inner-wrapper {
+            padding: 50px 0;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+
+            @media screen and (max-width: $breakpoint-md) {
+              padding: 30px 0;
+            }
+            @media screen and (max-width: $breakpoint-sm) {
+              padding: 20px 0;
+              grid-template-columns: repeat(2, 1fr);
+              gap: 15px;
+            }
+            @media screen and (max-width: $breakpoint-xsm) {
+              grid-template-columns: repeat(1, 1fr);
+            }
+
+            .portfolio-column {
+              @include flex-column;
+              gap: 20px;
+
+              @media screen and (max-width: $breakpoint-sm) {
+                gap: 15px;
+
+                &:nth-child(3) {
+                  display: none;
+                }
+              }
+              @media screen and (max-width: $breakpoint-xsm) {
+                gap: 10px;
+
+                &:nth-child(2) {
+                  display: none;
+                }
+              }
+
+              .portfolio-gallery-itm {
+                display: flex;
+
+                img.gallery-img {
+                  width: 100%;
+                  height: auto;
+                }
+              }
+            }
+          }
+        }
       }
+      // Portfolio Section ends here
     }
   }
 }
