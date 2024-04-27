@@ -52,17 +52,49 @@ function scriptWrapper($) {
                imgLeft.css({
                   'object-position': 'center ' + scrollPos * (-0.05) + 'px',
                   'background-size': 'calc(100% + ' + scrollPos * 0.8 + 'px)'
-              });
-              imgRight.css({
+               });
+               imgRight.css({
                   'object-position': 'center ' + scrollPos * (-0.09) + 'px',
                   'background-size': 'calc(100% + ' + scrollPos * 0.8 + 'px)'
-              });              
+               });
             });
+         };
+
+         // Parallax Effect for the rounded banner section
+         const parallaxEffectRoundedBanner = function () {
+            const bannerSection = $('section.rounded-banner-section-wrap');
+            const bannerImage = bannerSection.find('.rounded-banner');
+            const options = {
+               threshold: 0.2 // Trigger when 20% of the banner section is visible in viewport
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+               entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                     // If the section is in the viewport, apply the parallax effect
+                     $(window).on('scroll', adjustBannerRadius);
+                  } else {
+                     // If the section is not in the viewport, remove the border radius adjustment
+                     bannerImage.css('border-radius', '0.5px'); // Reset border radius
+                     $(window).off('scroll', adjustBannerRadius);
+                  }
+               });
+            }, options);
+
+            observer.observe(bannerSection[0]);
+
+            function adjustBannerRadius() {
+               const scrollPos = $(window).scrollTop();
+               // Adjust border radius based on scroll position
+               const borderRadius = (scrollPos * 0.03) + "px";
+               bannerImage.css('border-radius', borderRadius);
+            }
          };
 
          // Execute Parallax
          parallaxEffectHero();
          parallaxEffectAbout();
+         parallaxEffectRoundedBanner();
       },
 
       /**

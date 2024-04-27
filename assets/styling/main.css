@@ -954,5 +954,44 @@ body main.main-content section.services-section-wrap .services-section .services
     line-height: 20px;
   }
 }
+body main.main-content section.rounded-banner-section-wrap {
+  padding: 90px 0;
+}
+@media screen and (max-width: 1199px) {
+  body main.main-content section.rounded-banner-section-wrap {
+    padding: 82px 0;
+  }
+}
+@media screen and (max-width: 991px) {
+  body main.main-content section.rounded-banner-section-wrap {
+    padding: 68px 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  body main.main-content section.rounded-banner-section-wrap {
+    padding: 52px 0;
+  }
+}
+@media screen and (max-width: 543px) {
+  body main.main-content section.rounded-banner-section-wrap {
+    padding: 27px 0;
+  }
+}
+body main.main-content section.rounded-banner-section-wrap .rounded-banner-section {
+  overflow: hidden;
+}
+body main.main-content section.rounded-banner-section-wrap .rounded-banner-section .rounded-banner {
+  aspect-ratio: 1200/800;
+  overflow: hidden;
+  transition: border-radius 0.3s ease;
+  border-radius: 0.5px;
+}
+body main.main-content section.rounded-banner-section-wrap .rounded-banner-section .rounded-banner img.banner {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: 550ms all ease;
+}
 
 /*# sourceMappingURL=main.css.map */
