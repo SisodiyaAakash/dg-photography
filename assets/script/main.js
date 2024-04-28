@@ -189,6 +189,43 @@ function scriptWrapper($) {
                ]
             });
          }
+
+         // Slick slider for the image slider section
+         var imageSlider = $('section.image-slider-section-wrap div.image-slider-section .image-slider-inner-wrap');
+         if (imageSlider.length > 0) {
+            imageSlider.slick({
+               slidesToShow: 3,
+               slidesToScroll: 1,
+               arrows: false,
+               infinite: true,
+               autoplay: true,
+               autoplaySpeed: 3000,
+               speed: 300,
+               variableWidth: true,
+               pauseOnHover: true,
+               centerMode: true,
+               responsive: [
+                  {
+                     breakpoint: 992,
+                     settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        variableWidth: false,
+                        centerMode: false,
+                     }
+                  },
+                  {
+                     breakpoint: 480,
+                     settings: {
+                        variableWidth: false,
+                        centerMode: false,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                     }
+                  },
+               ]
+            });
+         }
       },
 
       /**
