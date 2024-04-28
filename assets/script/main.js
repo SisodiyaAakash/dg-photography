@@ -16,6 +16,16 @@ function scriptWrapper($) {
       customFunctions: function () {
          // Initializing the Animation On Scroll 
          AOS.init();
+
+         // Function for contact cta button for the contact-section 
+         $('.contact-cta-btn').hover(
+            function () {
+               $(this).closest('.contact-section-wrap').find('.contact-section').addClass('hovered');
+            },
+            function () {
+               $(this).closest('.contact-section-wrap').find('.contact-section').removeClass('hovered');
+            }
+         );
       },
 
       /**

@@ -542,6 +542,148 @@ body {
         }
       }
       // Testimonial Section ends here
+
+      // Contact CTA Section
+      // Note For Nitish: Here I've used Yellow Color as it attracts and focus more for Call To Action
+      &.contact-section-wrap {
+        .contact-section {
+          background-color: $dg-secondary;
+          position: relative;
+
+          &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            display: block;
+            background-color: $yellow;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 0;
+            transition: $transition;
+          }
+
+          // Styling for parent's parent div contact section
+          &.hovered {
+            transition: $transition;
+
+            &::after {
+              background-color: $hover-grey;
+              transition: $transition;
+              top: 35%;
+              bottom: 35%;
+              right: 40%;
+              left: 40%;
+              width: 20%;
+              height: 30%;
+
+              @media screen and (max-width: $breakpoint-sm) {
+                top: 30%;
+                bottom: 30%;
+                height: 40%;
+              }
+              @media screen and (max-width: $breakpoint-xsm) {
+                top: 20%;
+                bottom: 20%;
+                left: 30%;
+                right: 30%;
+                width: 40%;
+                height: 60%;
+              }
+            }
+          }
+
+          .contact-cta-inner-wrap {
+            padding: 150px 0;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+
+            @include flex-center;
+            justify-content: center;
+
+            @media screen and (max-width: $breakpoint-lg) {
+              padding: 110px 0;
+            }
+            @media screen and (max-width: $breakpoint-md) {
+              padding: 90px 0;
+            }
+            @media screen and (max-width: $breakpoint-sm) {
+              padding: 70px 0;
+            }
+            @media screen and (max-width: $breakpoint-xsm) {
+              padding: 30px 0;
+            }
+
+            a.contact-cta-btn {
+              @include flex-center;
+              gap: 30px;
+              width: max-content;
+
+              @extend h1;
+              color: $dg-secondary;
+              text-transform: uppercase;
+              transition: $transition;
+
+              span.cta-text {
+                position: relative;
+
+                &::after {
+                  content: "";
+                  position: absolute;
+                  bottom: 0;
+                  right: 0;
+                  transform: translateY(10px);
+                  transition: $transition;
+
+                  width: 100%;
+                  height: 4px;
+                  background-color: $dg-secondary;
+                }
+              }
+
+              img.icon {
+                transition: $transition;
+                filter: brightness(0);
+                width: auto;
+                height: calc(79px / 2);
+
+                @media screen and (max-width: $breakpoint-lg) {
+                  height: calc(56px / 2);
+                }
+
+                @media screen and (max-width: $breakpoint-sm) {
+                  height: calc(48px / 2);
+                }
+              }
+
+              &:hover,
+              &:focus,
+              &:visited {
+                color: $yellow;
+                transition: $transition;
+
+                span.cta-text {
+                  &::after {
+                    width: 10px;
+                    right: 0;
+                    background-color: $yellow;
+                    transition: $transition;
+                  }
+                }
+                img.icon {
+                  transition: $transition;
+                  filter: brightness(1);
+                  transform: rotate(45deg);
+                }
+              }
+            }
+          }
+        }
+      }
+      // Contact CTA Section ends here
     }
   }
 }
