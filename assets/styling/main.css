@@ -655,6 +655,11 @@ body footer.footer .footer-inner-wrap .media-area {
     width: 100%;
   }
 }
+@media screen and (max-width: 767px) {
+  body footer.footer .footer-inner-wrap .media-area {
+    display: none;
+  }
+}
 body footer.footer .footer-inner-wrap .media-area figure.footer-image-wrapper {
   padding: 0;
   margin: 0 10%;

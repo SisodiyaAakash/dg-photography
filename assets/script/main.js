@@ -31,6 +31,33 @@ function scriptWrapper($) {
          // Update copyright year
          var currentYear = new Date().getFullYear();
          $('.footer .copyright-section .copyright-text #current-year').append(currentYear);
+
+         // Function to change the footer image on hover of corresponding footer menu item
+         var imageElement = $('.footer .footer-image-wrapper .footer-img');
+         const defaultImagePath = imageElement.attr('src');
+
+         // Function to change the image on menu link hover
+         $('.footer .content-area ul.footer-menu-list li.footer-menu-itm a.menu-link').hover(function () {
+            // Get the target attribute value (image name)
+            const target = $(this).attr('target');
+
+            // Replace the image name in the default image path
+            const newImagePath = defaultImagePath.replace('footer-default', 'footer-' + target);
+
+            // Update the footer image source with a delay
+            setTimeout(function () {
+               imageElement.attr('src', newImagePath);
+            }, 200);
+         }, function () {
+            // Change back to default image path with a transition
+            imageElement.css('transition', 'opacity 0.5s ease');
+            imageElement.css('opacity', '0');
+            setTimeout(function () {
+               imageElement.attr('src', defaultImagePath);
+               imageElement.css('transition', 'opacity 0.5s ease');
+               imageElement.css('opacity', '1');
+            }, 200); // Adjust the delay time as needed (in milliseconds)
+         });
       },
 
       /**
