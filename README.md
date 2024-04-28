@@ -54,3 +54,7 @@ To keep things consistent, I've begun all common elements and other common code 
 
 ## Author
 Aakash Sisodiya
+
+## Note For Nitish
+I've completed the Html Developer Assessment Test, I've tried my best to complete it in a creative way, I took care of almost every aspects suggested in the both Loom video and the Document.
+There are few stuffs I've either intentionally missed due to lack of my efficiency (For example: I've intentionally missed Bootstrap Components as I was habitual to use my own UI Guideline in tenure of my experience, I'm familiar and experience with the Bootstrap older version however I was not using frequently so I'm not aware about the Bootstrap 5.2, but I can easily adapt it if there is any requirements in the time of the actual work) in that aspect or because the section need to be treated in my manner (For example: I've crafted the Testimonial in my own way as the section in my mind had a background image in the banner so there is no meaning to have the testimonial with Content and Image Slider side by side, so I've simply created it with banner background with Heading Label with Description content and Feedback Slider side by side).
