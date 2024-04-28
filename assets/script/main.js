@@ -147,6 +147,38 @@ function scriptWrapper($) {
                ]
             });
          }
+
+         // Slick slider for the testimonial section
+         var testimonialSlider = $('section.testimonial-section-wrap .testimonial-section .overlay-wrapper .testimonial-inner-wrap .testimonial-area');
+         if (testimonialSlider.length > 0) {
+            testimonialSlider.slick({
+               slidesToShow: 3,
+               slidesToScroll: 1,
+               dots: true,
+               arrows: false,
+               infinite: true,
+               autoplay: true,
+               autoplaySpeed: 3000,
+               speed: 300,
+               pauseOnHover: true,
+               responsive: [
+                  {
+                     breakpoint: 1200,
+                     settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                     }
+                  },
+                  {
+                     breakpoint: 768,
+                     settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                     }
+                  },
+               ]
+            });
+         }
       },
 
       /**

@@ -362,16 +362,16 @@ body {
       &.rounded-banner-section-wrap {
         padding: 90px 0;
 
-        @media screen and (max-width: 1199px) {
+        @media screen and (max-width: $breakpoint-lg) {
           padding: 82px 0;
         }
-        @media screen and (max-width: 991px) {
+        @media screen and (max-width: $breakpoint-md) {
           padding: 68px 0;
         }
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: $breakpoint-sm) {
           padding: 52px 0;
         }
-        @media screen and (max-width: 543px) {
+        @media screen and (max-width: $breakpoint-xsm) {
           padding: 27px 0;
         }
 
@@ -395,6 +395,153 @@ body {
         }
       }
       // Rounded Banner Section ends here
+
+      // Testimonial Section
+      &.testimonial-section-wrap {
+        .testimonial-section {
+          background-position: center;
+          background-size: cover;
+
+          .overlay-wrapper {
+            background-color: rgba($black, 0.8);
+            padding: 150px 0;
+
+            @media screen and (max-width: $breakpoint-lg) {
+              padding: 110px 0;
+            }
+            @media screen and (max-width: $breakpoint-md) {
+              padding: 90px 0;
+            }
+            @media screen and (max-width: $breakpoint-sm) {
+              padding: 70px 0;
+            }
+            @media screen and (max-width: $breakpoint-xsm) {
+              padding: 30px 0;
+            }
+
+            .testimonial-inner-wrap {
+              @include flex-column;
+              gap: 50px;
+
+              .content-area {
+                @include flex-column-center;
+                align-items: center;
+                text-align: center;
+              }
+
+              .testimonial-area {
+                &:not(.slick-initialized) {
+                  display: flex;
+                  overflow-x: auto;
+                  gap: 20px;
+
+                  .testimonial-itm {
+                    min-width: 100%;
+                  }
+                }
+
+                &.slick-initialized {
+                  position: relative;
+                  padding-bottom: 40px;
+                  margin: 0 -10px;
+
+                  .testimonial-itm {
+                    margin: 0 10px;
+                    transition: $transition;
+                  }
+
+                  ul.slick-dots {
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0;
+                    transform: translateX(-50%);
+
+                    @include flex-center;
+                    justify-content: center;
+                    gap: 20px;
+
+                    @media screen and (max-width: $breakpoint-md) {
+                      gap: 15px;
+                    }
+                    @media screen and (max-width: $breakpoint-sm) {
+                      gap: 10px;
+                    }
+
+                    li {
+                      @include flex-center;
+                      justify-content: center;
+                      padding: 3px;
+                      border: 1px solid transparent;
+                      border-radius: $border-rounded;
+                      transition: $transition;
+                      cursor: pointer;
+
+                      button {
+                        font-size: 0;
+                        line-height: 0;
+
+                        display: block;
+                        width: 6px;
+                        height: 6px;
+                        padding: 0;
+                        border: 0;
+                        outline: none;
+                        background-color: rgba($white, 0.6);
+                        border-radius: inherit;
+                        transition: $transition;
+                      }
+
+                      &.slick-active,
+                      &:hover {
+                        border-color: $white;
+                        transition: $transition;
+
+                        button {
+                          transition: $transition;
+                          background-color: $white;
+                        }
+                      }
+                    }
+                  }
+                }
+
+                .testimonial-itm {
+                  @include flex-column;
+                  gap: 30px;
+
+                  padding: 25px 35px;
+                  background-color: rgba($white, 0.8);
+                  border-radius: $border-regular;
+                  cursor: grabbing;
+
+                  @media screen and (max-width: $breakpoint-sm) {
+                    background-color: $white;
+                  }
+
+                  &:hover {
+                    background-color: $white;
+                  }
+
+                  .satisfied-client {
+                    @include flex-center;
+                    gap: 20px;
+                    transition: $transition;
+
+                    img.client-profile {
+                      width: 60px;
+                      height: 60px;
+                      object-fit: cover;
+                      object-position: center;
+                      border-radius: $border-rounded;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      // Testimonial Section ends here
     }
   }
 }

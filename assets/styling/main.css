@@ -972,7 +972,7 @@ body main.main-content section.rounded-banner-section-wrap {
     padding: 52px 0;
   }
 }
-@media screen and (max-width: 543px) {
+@media screen and (max-width: 479px) {
   body main.main-content section.rounded-banner-section-wrap {
     padding: 27px 0;
   }
@@ -992,6 +992,144 @@ body main.main-content section.rounded-banner-section-wrap .rounded-banner-secti
   height: auto;
   object-fit: cover;
   transition: 550ms all ease;
+}
+body main.main-content section.testimonial-section-wrap .testimonial-section {
+  background-position: center;
+  background-size: cover;
+}
+body main.main-content section.testimonial-section-wrap .testimonial-section .overlay-wrapper {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 150px 0;
+}
+@media screen and (max-width: 1199px) {
+  body main.main-content section.testimonial-section-wrap .testimonial-section .overlay-wrapper {
+    padding: 110px 0;
+  }
+}
+@media screen and (max-width: 991px) {
+  body main.main-content section.testimonial-section-wrap .testimonial-section .overlay-wrapper {
+    padding: 90px 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  body main.main-content section.testimonial-section-wrap .testimonial-section .overlay-wrapper {
+    padding: 70px 0;
+  }
+}
+@media screen and (max-width: 479px) {
+  body main.main-content section.testimonial-section-wrap .testimonial-section .overlay-wrapper {
+    padding: 30px 0;
+  }
+}
+body main.main-content section.testimonial-section-wrap .testimonial-section .overlay-wrapper .testimonial-inner-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+body main.main-content section.testimonial-section-wrap .testimonial-section .overlay-wrapper .testimonial-inner-wrap .content-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+body main.main-content section.testimonial-section-wrap .testimonial-section .overlay-wrapper .testimonial-inner-wrap .testimonial-area:not(.slick-initialized) {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+}
+body main.main-content section.testimonial-section-wrap .testimonial-section .overlay-wrapper .testimonial-inner-wrap .testimonial-area:not(.slick-initialized) .testimonial-itm {
+  min-width: 100%;
+}
+body main.main-content section.testimonial-section-wrap .testimonial-section .overlay-wrapper .testimonial-inner-wrap .testimonial-area.slick-initialized {
+  position: relative;
+  padding-bottom: 40px;
+  margin: 0 -10px;
+}
+body main.main-content section.testimonial-section-wrap .testimonial-section .overlay-wrapper .testimonial-inner-wrap .testimonial-area.slick-initialized .testimonial-itm {
+  margin: 0 10px;
+  transition: 550ms all ease;
+}
+body main.main-content section.testimonial-section-wrap .testimonial-section .overlay-wrapper .testimonial-inner-wrap .testimonial-area.slick-initialized ul.slick-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+@media screen and (max-width: 991px) {
+  body main.main-content section.testimonial-section-wrap .testimonial-section .overlay-wrapper .testimonial-inner-wrap .testimonial-area.slick-initialized ul.slick-dots {
+    gap: 15px;
+  }
+}
+@media screen and (max-width: 767px) {
+  body main.main-content section.testimonial-section-wrap .testimonial-section .overlay-wrapper .testimonial-inner-wrap .testimonial-area.slick-initialized ul.slick-dots {
+    gap: 10px;
+  }
+}
+body main.main-content section.testimonial-section-wrap .testimonial-section .overlay-wrapper .testimonial-inner-wrap .testimonial-area.slick-initialized ul.slick-dots li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  transition: 550ms all ease;
+  cursor: pointer;
+}
+body main.main-content section.testimonial-section-wrap .testimonial-section .overlay-wrapper .testimonial-inner-wrap .testimonial-area.slick-initialized ul.slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 6px;
+  height: 6px;
+  padding: 0;
+  border: 0;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: inherit;
+  transition: 550ms all ease;
+}
+body main.main-content section.testimonial-section-wrap .testimonial-section .overlay-wrapper .testimonial-inner-wrap .testimonial-area.slick-initialized ul.slick-dots li.slick-active, body main.main-content section.testimonial-section-wrap .testimonial-section .overlay-wrapper .testimonial-inner-wrap .testimonial-area.slick-initialized ul.slick-dots li:hover {
+  border-color: #ffffff;
+  transition: 550ms all ease;
+}
+body main.main-content section.testimonial-section-wrap .testimonial-section .overlay-wrapper .testimonial-inner-wrap .testimonial-area.slick-initialized ul.slick-dots li.slick-active button, body main.main-content section.testimonial-section-wrap .testimonial-section .overlay-wrapper .testimonial-inner-wrap .testimonial-area.slick-initialized ul.slick-dots li:hover button {
+  transition: 550ms all ease;
+  background-color: #ffffff;
+}
+body main.main-content section.testimonial-section-wrap .testimonial-section .overlay-wrapper .testimonial-inner-wrap .testimonial-area .testimonial-itm {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 25px 35px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 16px;
+  cursor: grabbing;
+}
+@media screen and (max-width: 767px) {
+  body main.main-content section.testimonial-section-wrap .testimonial-section .overlay-wrapper .testimonial-inner-wrap .testimonial-area .testimonial-itm {
+    background-color: #ffffff;
+  }
+}
+body main.main-content section.testimonial-section-wrap .testimonial-section .overlay-wrapper .testimonial-inner-wrap .testimonial-area .testimonial-itm:hover {
+  background-color: #ffffff;
+}
+body main.main-content section.testimonial-section-wrap .testimonial-section .overlay-wrapper .testimonial-inner-wrap .testimonial-area .testimonial-itm .satisfied-client {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: 550ms all ease;
+}
+body main.main-content section.testimonial-section-wrap .testimonial-section .overlay-wrapper .testimonial-inner-wrap .testimonial-area .testimonial-itm .satisfied-client img.client-profile {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
 }
 
 /*# sourceMappingURL=main.css.map */
