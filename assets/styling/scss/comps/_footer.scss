@@ -1,5 +1,230 @@
 body {
   footer.footer {
-    // Footer css
+    padding: 80px 0 40px;
+
+    @media screen and (max-width: 1199px) {
+      padding: 72px 0 36px;
+    }
+
+    @media screen and (max-width: 991px) {
+      padding: 27px 0;
+    }
+
+    .footer-inner-wrap {
+      @include flex-wrap;
+      row-gap: 27px;
+
+      .media-area {
+        width: 40%;
+
+        @media screen and (max-width: 991px) {
+          width: 100%;
+        }
+
+        figure.footer-image-wrapper {
+          padding: 0;
+          margin: 0 10%;
+          aspect-ratio: 350/400;
+
+          @media screen and (max-width: 991px) {
+            margin: 0;
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+
+      .content-area {
+        width: 60%;
+        @include flex-column;
+
+        @media screen and (max-width: 991px) {
+          width: 100%;
+        }
+
+        .menu-section {
+          flex: 1;
+
+          .menu-heading {
+            font-size: 17px;
+            line-height: 1;
+            letter-spacing: 1.7px;
+            color: $grey-2;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+
+            @media screen and (max-width: 991px) {
+              margin-bottom: 27px;
+            }
+
+            @media screen and (max-width: 767px) {
+              font-size: 14px;
+            }
+          }
+
+          ul {
+            &.footer-menu-list {
+              @include flex-wrap;
+              column-gap: 40px;
+              row-gap: 20px;
+              margin-bottom: 30px;
+
+              @media screen and (max-width: 991px) {
+                margin-bottom: 27px;
+                gap: 27px;
+              }
+
+              li.footer-menu-itm {
+                a.menu-link {
+                  font-size: 42px;
+                  line-height: 1;
+                  letter-spacing: -0.42px;
+                  color: $dg-secondary;
+                  font-weight: $medium;
+                  transition: $transition;
+
+                  @media screen and (max-width: 991px) {
+                    font-size: 27px;
+                  }
+
+                  &:hover,
+                  &:focus,
+                  &:focus-visible {
+                    transition: $transition;
+                    color: $hover-grey;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .footer-contact-section {
+          .physical-contact-details {
+            margin-bottom: 15px;
+          }
+
+          .digital-contact-details {
+            margin-bottom: 60px;
+            @include flex-wrap;
+            justify-content: space-between;
+            column-gap: 30px;
+            row-gap: 27px;
+
+            @media screen and (max-width: 1199px) {
+              margin-bottom: 54px;
+            }
+            @media screen and (max-width: 991px) {
+              margin-bottom: 27px;
+            }
+
+            ul {
+              @include flex-wrap;
+              row-gap: 30px;
+              column-gap: 20px;
+
+              &.contact-list {
+                li.contact-itm {
+                  a.contact-link {
+                    width: max-content;
+                    @include flex-center;
+                    gap: 10px;
+
+                    span {
+                      position: relative;
+                      color: $dg-secondary;
+
+                      @extend p;
+                      font-weight: $medium;
+
+                      &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        transform: translateY(5px);
+                        transition: $transition;
+
+                        width: 100%;
+                        height: 2px;
+                        background-color: $dg-secondary;
+                      }
+                    }
+
+                    img.icon {
+                      transition: $transition;
+                    }
+
+                    &:hover,
+                    &:focus,
+                    &:focus-visible {
+                      span {
+                        &::after {
+                          width: 10px;
+                          right: 0;
+                          transition: $transition;
+                        }
+                      }
+                      img.icon {
+                        transition: $transition;
+                        transform: rotate(45deg);
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.social-link-list {
+                .social-itm {
+                  .social-link {
+                    transition: $transition;
+                    filter: brightness(0);
+
+                    &:hover,
+                    &:focus,
+                    &:focus-visible {
+                      filter: brightness(1);
+                      transition: $transition;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .copyright-section {
+          * {
+            color: $hover-grey;
+            @extend p;
+          }
+
+          @include flex-wrap;
+          gap: 15px;
+
+          .copyright-text {
+            @media screen and (max-width: $breakpoint-xsm) {
+              width: 100%;
+            }
+          }
+
+          ul.copyright-menu-list {
+            display: flex;
+            gap: 15px;
+            flex: 1;
+
+            li.copyright-menu-itm {
+              a.menu-link {
+                white-space: nowrap;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

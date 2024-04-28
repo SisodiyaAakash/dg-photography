@@ -26,6 +26,11 @@ function scriptWrapper($) {
                $(this).closest('.contact-section-wrap').find('.contact-section').removeClass('hovered');
             }
          );
+
+         // Function for footer
+         // Update copyright year
+         var currentYear = new Date().getFullYear();
+         $('.footer .copyright-section .copyright-text #current-year').append(currentYear);
       },
 
       /**
@@ -234,6 +239,7 @@ function scriptWrapper($) {
       registerEventHandlers: function () {
          $(document).on('click', 'body header.header nav.navbar .brand-area a.toggle-btn', dgTheme.toggleMobileMenu);
          $(document).on('click', 'ul li.menu-itm a.menu-link', dgTheme.scrollToSection);
+         $(document).on('click', 'ul li.footer-menu-itm a.menu-link', dgTheme.scrollToSection);
       },
 
       /**
@@ -267,12 +273,15 @@ function scriptWrapper($) {
          }
 
          // Also need to remove the classes for mobile menu close
-         $('body').removeClass('oveflow-hidden');
-         $('body header.header').removeClass('open-mobile-header');
-         $('body header.header .mobile-menu').removeClass('open-mobile-menu');
+         if ($(this).parent().parent().hasClass('mobile-menu-list')) {
+            console.log("I clicked Mobile Menu");
+            $('body').removeClass('oveflow-hidden');
+            $('body header.header').removeClass('open-mobile-header');
+            $('body header.header .mobile-menu').removeClass('open-mobile-menu');
 
-         // Toggle hide class on body header.header nav.navbar .brand-area a.toggle-btn span
-         $('body header.header nav.navbar .brand-area a.toggle-btn span').toggleClass('hide');
+            // Toggle hide class on body header.header nav.navbar .brand-area a.toggle-btn span
+            $('body header.header nav.navbar .brand-area a.toggle-btn span').toggleClass('hide');
+         }
       },
    }; // end dgTheme
 
