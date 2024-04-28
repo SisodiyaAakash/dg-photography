@@ -143,6 +143,23 @@ function scriptWrapper($) {
        * Slider Functions
        */
       sliderFunctions: function () {
+         // Slick slider for the Hero section
+         var heroSlider = $('section.hero-section-wrap');
+         if (heroSlider.length > 0) {
+            heroSlider.slick({
+               slidesToShow: 1,
+               slidesToScroll: 1,
+               arrows: false,
+               autoplay: true,
+               infinite: true,
+               autoplaySpeed: 4000,
+               speed: 1500,
+               fade: true,
+               cssEase: 'ease',
+               pauseOnHover: false
+            });
+         }
+
          // Slick slider for the Portfolio section
          var portfolioSlider = $('section.portfolio-section-wrap .corporate-portfolio-section .corporate-portfolio-inner-wrapper');
          if (portfolioSlider.length > 0) {

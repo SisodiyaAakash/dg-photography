@@ -827,13 +827,21 @@ body footer.footer .footer-inner-wrap .content-area .copyright-section ul.copyri
   white-space: nowrap;
 }
 
+body main.main-content section.hero-section-wrap:not(.slick-initialized) {
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+}
+body main.main-content section.hero-section-wrap:not(.slick-initialized) .hero-section {
+  min-width: 100%;
+}
 body main.main-content section.hero-section-wrap .hero-section {
   background-size: cover;
   background-position: center;
 }
 body main.main-content section.hero-section-wrap .hero-section .overlay-wrapper {
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0, 0.9) 100%);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;

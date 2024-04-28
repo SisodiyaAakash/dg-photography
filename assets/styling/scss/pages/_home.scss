@@ -3,13 +3,26 @@ body {
     section {
       // Hero Section
       &.hero-section-wrap {
+        &:not(.slick-initialized) {
+          @include flex-center;
+          overflow-x: auto;
+
+          .hero-section {
+            min-width: 100%;
+          }
+        }
+
         .hero-section {
           background-size: cover;
           background-position: center;
 
           .overlay-wrapper {
             height: 100vh;
-            background-color: rgba($black, 0.2);
+            background-image: linear-gradient(
+              180deg,
+              rgba($black, 0.5) 20%,
+              rgba($black, 0.9) 100%
+            );
             @include flex-column;
             justify-content: flex-end;
             padding-bottom: 102px;
